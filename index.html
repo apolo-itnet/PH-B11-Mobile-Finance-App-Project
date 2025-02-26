@@ -19,7 +19,7 @@
 </head>
 <body class="bg-slate-800 outfit-font">
 
-  <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200 ">
+  <section class="max-w-full md:max-w-md min-h-screen mx-auto py-6 bg-gray-200 ">
 
     <header class="flex flex-col justify-center">
       <nav class="flex justify-center">
@@ -42,20 +42,20 @@
                 <label class="label">
                   <span class="label-text font-semibold text-black mb-1">Mobile Number</span>
                 </label>
-                <input value="01816111222" type="number" placeholder="Enter 11 digin account number" class="input input-bordered text-sm " required />
+                <input value="01816111222" id="acc-number" type="number" placeholder="Enter 11 digit account number" class="input input-bordered text-sm " required />
               </div>
 
               <div class="form-control">
                 <label class="label">
                   <span class="label-text  font-semibold text-black mb-1">4 Digit PIN</span>
                 </label>
-                <input value="1234" type="text" placeholder="Enter 4 digit PIN Number" class="input input-bordered text-sm " required />
+                <input value="1234" id="pin" type="text" placeholder="Enter 4 digit PIN Number" class="input input-bordered text-sm " required />
                 <label class="label">
                 </label>
               </div>
 
               <div class="form-control">
-                <button class="btn btn-primary w-full rounded-full bg-blue-500 border-none py-6">Login</button>
+                <button id="login-btn" class="btn btn-primary w-full rounded-full bg-blue-500 border-none py-6">Login</button>
               </div>
             </form>
           </div>
@@ -68,7 +68,6 @@
 
   </section>
 
-  <script src="script/utilities.js"></script>
-  <script src="script/login.js"></script>
+<script src="script/login.js"></script>
 </body>
 </html>
