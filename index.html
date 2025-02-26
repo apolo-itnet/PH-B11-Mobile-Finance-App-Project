@@ -4,8 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Payoo</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  <style>
+    .outfit-font{
+      font-family: "Outfit", serif;
+    }
+  </style>
 </head>
-<body>
-  
+<body class="bg-slate-800 outfit-font">
+
+  <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200 ">
+
+    <header class="flex flex-col justify-center">
+      <nav class="flex justify-center">
+        <div class=" relative flex justify-center items-center mt-10 w-11/12">
+          <img class="w-auto" src="assets/bg.png" alt="">
+          <img class="w-16 top-10 absolute" src="assets/Group.png" alt="">
+        </div>
+      </nav>
+    </header>
+ 
+    <!-- login section -->
+    <div>
+      
+      <div class="hero ">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+
+              <div class="form-control mb-2">
+                <label class="label">
+                  <span class="label-text font-semibold text-black mb-1">Mobile Number</span>
+                </label>
+                <input value="01816111222" type="number" placeholder="Enter your number" class="input input-bordered text-sm " required />
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text  font-semibold text-black mb-1">4 Digit PIN</span>
+                </label>
+                <input value="1234" type="text" placeholder="Enter 4 digit PIN" class="input input-bordered text-sm " required />
+                <label class="label">
+                </label>
+              </div>
+
+              <div class="form-control">
+                <button class="btn btn-primary w-full rounded-full bg-blue-500 border-none py-6">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </section>
+
+  <script src="script/utilities.js"></script>
+  <script src="script/login.js"></script>
 </body>
 </html>
