@@ -19,7 +19,7 @@
 </head>
 <body class="bg-slate-800 outfit-font">
 
-  <section class="max-w-md min-h-screen mx-auto bg-gray-200 ">
+  <section class="max-w-full md:max-w-md min-h-screen mx-auto bg-gray-200 ">
 
     <header class="border-b border-gray-500/30">
       <nav class="flex justify-around items-center py-4 px-6">
@@ -78,7 +78,7 @@
      </div>
 
     
-    <!-- latest-transaction -->
+    <!-- latest-transaction-section -->
      <div class="py-6 px-8">
       <div class="flex justify-between items-center">
         <h2 class="text-lg font-bold">Latest Transaction</h2>
@@ -100,6 +100,261 @@
         </button>
       </div>
      </div>
+    
+    <!-- Add-Money-section -->
+    <div>
+      
+      <div class="px-4">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+            
+            <form class="px-4 py-4 gap-3 flex flex-col mx-auto">
+              <h1 class="text-2xl font-bold text-center text-gray-600 ">Add Money</h1>
+
+              <fieldset class="fieldset">
+                <legend class="fieldset-legend text-sm">Select A Bank</legend>
+                <select class="select">
+                  <option value="Bkash">Bkash</option>
+                  <option value="Nagad">Nagad</option>
+                  <option value="Upay">Upay</option>
+                  <option value="Rocket">Rocket</option>
+                  <option value="DBBL">DBBL</option>
+                  <option value="Cellfin">Cellfin</option>
+                  <option value="Unet">Unet</option>
+                </select>
+              </fieldset>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-sm font-semibold text-black mb-1">Mobile Number</span>
+                </label> <br>
+                <input value="01816111222" type="number" placeholder="Enter 11 digit account number" class="input input-bordered text-sm " required />
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-sm font-semibold text-black mb-1">4 Digit PIN</span>
+                </label>
+                <input value="1234" type="text" placeholder="Enter 4 digit PIN" class="input input-bordered text-sm " required />
+                <label class="label">
+                </label>
+              </div>
+
+              <div class="form-control mb-2">
+                <label class="label">
+                  <span class="label-text text-base font-semibold text-black mb-1">Amount to Add</span>
+                </label>
+                <input type="number" placeholder="Add Amount - Tk" class="input input-bordered text-sm " required />
+              </div>
+
+
+              <div class="form-control">
+                <button class="btn btn-primary w-full rounded-full bg-blue-500 border-none py-6 text-base">Add Money</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+     <!-- Cashout-section -->
+     <div>
+      
+      <div class="px-4">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+            
+            <form class="px-4 py-4 gap-3 flex flex-col mx-auto">
+              <h1 class="text-2xl font-bold text-center text-gray-600 ">Cashout</h1>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-sm font-semibold text-black mb-1">Agent Number </span>
+                </label> <br>
+                <input value="01816111222" type="number" placeholder="Enter 11 digit account number" class="input input-bordered text-sm " required />
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-sm font-semibold text-black mb-1">4 Digit PIN</span>
+                </label>
+                <input value="1234" type="text" placeholder="Enter 4 digit PIN" class="input input-bordered text-sm " required />
+                <label class="label">
+                </label>
+              </div>
+
+              <div class="form-control mb-2">
+                <label class="label">
+                  <span class="label-text text-base font-semibold text-black mb-1">Amount to Add</span>
+                </label>
+                <input type="number" placeholder="Add Withdraw Amount - Tk" class="input input-bordered text-sm " required />
+              </div>
+
+
+              <div class="form-control">
+                <button class="btn btn-primary w-full rounded-full bg-blue-500 border-none py-6 text-base">Cashout</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+     <!-- Transfer-section -->
+    <div>
+      
+      <div class="px-4">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+            
+            <form class="px-4 py-4 gap-3 flex flex-col mx-auto">
+              <h1 class="text-2xl font-bold text-center text-gray-600 ">Transfer Money</h1>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-sm font-semibold text-black mb-1">Personal Number </span>
+                </label> <br>
+                <input value="01816111222" type="number" placeholder="Enter 11 digit account number" class="input input-bordered text-sm " required />
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-sm font-semibold text-black mb-1">4 Digit PIN</span>
+                </label>
+                <input value="1234" type="text" placeholder="Enter 4 digit PIN" class="input input-bordered text-sm " required />
+                <label class="label">
+                </label>
+              </div>
+
+              <div class="form-control mb-2">
+                <label class="label">
+                  <span class="label-text text-base font-semibold text-black mb-1">Amount to Add</span>
+                </label>
+                <input type="number" placeholder="Add Withdraw Amount - Tk" class="input input-bordered text-sm " required />
+              </div>
+
+
+              <div class="form-control">
+                <button class="btn btn-primary w-full rounded-full bg-blue-500 border-none py-6 text-base">Send Money</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- Get-Bonus-section -->
+    <div>
+      
+      <div class="px-4">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+            
+            <form class="px-4 py-4 gap-3 flex flex-col mx-auto">
+              <h1 class="text-2xl font-bold text-center text-gray-600 ">Get Bonus</h1>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-sm font-semibold text-black mb-1">Ener Bonus Coupon</span>
+                </label>
+                <input type="text" placeholder="Enter your coupon" class="input input-bordered text-sm " required />
+                <label class="label">
+                </label>
+              </div>
+
+              <div class="form-control">
+                <button class="btn btn-primary w-full rounded-full bg-blue-500 border-none py-6 text-base">Get Bonus</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+     <!-- Pay-Bill-section -->
+     <div>
+      
+      <div class="px-4">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+            
+            <form class="px-4 py-4 gap-3 flex flex-col mx-auto">
+              <h1 class="text-2xl font-bold text-center text-gray-600 ">Pay Bill</h1>
+
+              <fieldset class="fieldset">
+                <legend class="fieldset-legend text-sm">Select to Pay</legend>
+                <select class="select">
+                  <option value="Internet">Internet</option>
+                  <option value="Electricity">Electricity</option>
+                  <option value="Gas">Gas</option>
+                  <option value="Goverment Fee">Goverment Fee</option>
+                  <option value="Water">Water</option>
+                  <option value="Telephone">Telephone</option>
+                  <option value="Television">Television</option>
+                </select>
+              </fieldset>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-sm font-semibold text-black mb-1">Mobile Number</span>
+                </label> <br>
+                <input value="01816111222" type="number" placeholder="Enter 11 digit account number" class="input input-bordered text-sm " required />
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-sm font-semibold text-black mb-1">4 Digit PIN</span>
+                </label>
+                <input value="1234" type="text" placeholder="Enter 4 digit PIN" class="input input-bordered text-sm " required />
+                <label class="label">
+                </label>
+              </div>
+
+              <div class="form-control mb-2">
+                <label class="label">
+                  <span class="label-text text-base font-semibold text-black mb-1">Amount to Add</span>
+                </label>
+                <input type="number" placeholder="Add Amount - Tk" class="input input-bordered text-sm " required />
+              </div>
+
+
+              <div class="form-control">
+                <button class="btn btn-primary w-full rounded-full bg-blue-500 border-none py-6 text-base">Pay Now</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- latest-transaction-section -->
+    <div class="py-6 px-8">
+     <div class="flex justify-between items-center">
+       <h2 class="text-lg font-bold">Transaction History</h2>
+       <button class="text-gray-500 hover:text-blue-700  font-semibold cursor-pointer py-4 text-sm "">View All </button>
+     </div>
+    
+     <div class="flex items-center justify-between px-4 py-3 bg-white rounded-md">
+      <div class="flex items-center gap-4">
+        <div class="flex justify-center items-center w-14 h-14 bg-gray-300 rounded-full">
+          <img class="w-8" src="assets/wallet 1.png" alt="Wallet">
+        </div>
+        <div>
+        <h1 class="text-base font-semibold">Electricity Bill</h1>
+        <p class="text-sm text-gray-600">Today 01:44 PM</p>
+        </div>
+      </div>
+       <button>
+         <img class="w-6" src="assets/option.png" alt="Options"> </button>
+      </div>
+    </div>
   
   </section>
 
