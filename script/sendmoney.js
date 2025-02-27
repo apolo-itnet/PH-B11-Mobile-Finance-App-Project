@@ -1,10 +1,9 @@
-document.getElementById('cashout-btn').addEventListener("click", function(event) {
+document.getElementById('sendmoney-btn').addEventListener("click", function(event) {
   event.preventDefault();
 
-  const userAccount = document.getElementById('agent-number').value;
-  const pin = getInputValueByID("pin");
-  const amount = getInputValueByID('add-cashout-amount');
-  console.log(amount);
+  const userAccount = document.getElementById('personal-number').value;
+  const pin = getInputValueByID("sendmoney-pin");
+  const amount = getInputValueByID('add-sendmoney-amount');
   const mainBalance = getInnerTextById('main-balance');
 
   // Validate input
@@ -21,15 +20,17 @@ document.getElementById('cashout-btn').addEventListener("click", function(event)
   // Update balance
   const newBalance = mainBalance - amount;
   setInnerTextByIDandValue('main-balance', newBalance);
-  alert(`✅ Successfully cashout ${amount} ৳ `);
+  alert(`✅ Successfully send ${amount} ৳`);
 
     // Clear input fields after successful operation
-    clearInputFieldByID('agent-number');
-    clearInputFieldByID('cashout-pin');
-    clearInputFieldByID('add-cashout-amount');
+    clearInputFieldByID('personal-number');
+    clearInputFieldByID('sendmoney-pin');
+    clearInputFieldByID('add-sendmoney-amount');
+
   });
   
   // Restrict input fields to only allow numbers (no letters, no special characters except space)
-  document.getElementById('add-cashout-amount').addEventListener('keypress', restrictToNumbers);
-  document.getElementById('pin').addEventListener('keypress', restrictToNumbers);
   document.getElementById('agent-number').addEventListener('keypress', restrictToNumbers);
+  console.log('kaj hocche ki?')
+  document.getElementById('pin').addEventListener('keypress', restrictToNumbers);
+  document.getElementById('add-cashout-amount').addEventListener('keypress', restrictToNumbers);

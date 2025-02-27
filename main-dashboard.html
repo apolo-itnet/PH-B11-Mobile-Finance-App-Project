@@ -15,63 +15,73 @@
     .outfit-font{
       font-family: "Outfit", serif;
     }
+
+    .box.active {
+      @apply border-blue-500 text-blue-500 font-semibold;
+    }
+
   </style>
 </head>
 <body class="bg-slate-800 outfit-font">
 
-  <section class="max-w-full md:max-w-md min-h-screen mx-auto bg-gray-200 ">
+  <section class="max-w-full md:max-w-md min-h-screen mx-auto bg-gray-100 ">
 
-    <header class="border-b border-gray-500/30">
-      <nav class="flex justify-around items-center py-4 px-6">
-        <div class="flex gap-3">
-           <img class="w-2/12" src="assets/payoo.png" alt="">
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-gray-100 border-b border-gray-500/30 z-50 md:static md:max-w-md md:mx-auto">
+      <nav class="flex justify-between items-center py-4 px-6">
+        <div class="flex items-center gap-3">
+          <a href="main-dashboard.html" class="w-14">
+            <img class="w-full" src="assets/payoo.png" alt="Payoo Logo">
+          </a>
           <div>
-            <h1 class="text-2xl font-bold ">৳ <span id="main-balance">4500</span></h1>
+            <h1 class="text-2xl font-bold">৳ <span id="main-balance">4500</span></h1>
             <p class="capitalize text-gray-600">available balance</p>
           </div>
         </div>
-        <button id="logout-btn" class="btn rounded-lg border-gray-500/30"> <img class="w-6" src="assets/Frame.png" alt="">Logout</button>
-        
+        <button id="logout-btn" class="flex items-center gap-2 px-4 py-2 border border-gray-500/30 rounded-lg">
+          <img class="w-6" src="assets/Frame.png" alt=""> Logout
+        </button>
       </nav>
     </header>
+    
 
     <!-- main-welcome-heading -->
 
-    <div class="px-8 mt-8">
-      <h1 class="text-2xl font-bold">🔥 Welcome to Payooo!</h1>
-      <p>Enjoy easy and convenient financial services with us. Cashout charge is low and  </p>
+    <div class="px-8 pt-24 md:pt-0 mt-4">
+      <h1 class="text-2xl font-bold">Welcome to e-cash</h1>
+      <p class="text-gray-600">Your e-cash account is ready to use quick and easy transactions. </p>
+
     </div>
 
     <!-- grid-card -->
      <div class="cards py-6 px-8 grid grid-cols-3 gap-4">
 
-      <div id="add-money-box" class="box cursor-pointer border border-gray-500/30 px-1 py-3  text-center rounded-xl" >
-        <img class="w-8 mx-auto" src="assets/wallet 1.png" alt="">
+      <div id="add-money-box" class="box cursor-pointer border border-gray-500/30 px-1 py-3  text-center rounded-xl hover:border-blue-500 hover:text-blue-500 transition-all" >
+        <img class="w-8 mx-auto" src="assets/add-money.png" alt="">
         <h3 class="text-sm">Add Money</h3>
       </div>
 
-      <div id="cashout-box" class="box cursor-pointer border border-gray-500/30 px-1 py-3 text-center  rounded-xl" >
-        <img class="w-8 mx-auto" src="assets/send 1.png" alt="">
+      <div id="cashout-box" class="box cursor-pointer border border-gray-500/30 px-1 py-3 text-center  rounded-xl hover:border-blue-500 hover:text-blue-500 transition-all" >
+        <img class="w-8 mx-auto" src="assets/cashout.png" alt="">
         <h3 class="text-sm">Cashout</h3>
       </div>
 
-      <div id="transfer-money-box" class="box cursor-pointer border border-gray-500/30 px-1 py-3  text-center rounded-xl" >
-        <img class="w-8 mx-auto" src="assets/money 1.png" alt="">
-        <h3 class="text-sm">Transfer Money</h3>
+      <div id="transfer-money-box" class="box cursor-pointer border border-gray-500/30 px-1 py-3  text-center rounded-xl hover:border-blue-500 hover:text-blue-500 transition-all" >
+        <img class="w-8 mx-auto" src="assets/transfer-money.png" alt="">
+        <h3 class="text-sm">Send Money</h3>
       </div>
 
-      <div id="get-bonus-box" class="box cursor-pointer border border-gray-500/30 px-1 py-3  text-center rounded-xl" >
-        <img class="w-8 mx-auto" src="assets/financial 1.png" alt="">
+      <div id="get-bonus-box" class="box cursor-pointer border border-gray-500/30 px-1 py-3  text-center rounded-xl hover:border-blue-500 hover:text-blue-500 transition-all" >
+        <img class="w-8 mx-auto" src="assets/get-bonuses.png" alt="">
         <h3 class="text-sm">Get Bonus</h3>
       </div>
 
-      <div id="pay-bill-box" class="box cursor-pointer border border-gray-500/30 px-1 py-3 text-center  rounded-xl" >
-        <img class="w-8 mx-auto" src="assets/purse 1.png" alt="">
+      <div id="pay-bill-box" class="box cursor-pointer border border-gray-500/30 px-1 py-3 text-center  rounded-xl hover:border-blue-500 hover:text-blue-500 transition-all" >
+        <img class="w-8 mx-auto" src="assets/pay-bill.png" alt="">
         <h3 class="text-sm">Pay Bill</h3>
       </div>
 
-      <div id="transaction-history-box" class="box cursor-pointer border border-gray-500/30 px-1 py-3  text-center rounded-xl" >
-        <img class="w-8 mx-auto" src="assets/transaction 1.png" alt="">
+      <div id="transaction-history-box" class="box cursor-pointer border border-gray-500/30 px-1 py-3  text-center rounded-xl hover:border-blue-500 hover:text-blue-500 transition-all" >
+        <img class="w-8 mx-auto" src="assets/transaction-history.png" alt="">
         <h3 class="text-sm">Transaction</h3>
       </div>
 
@@ -79,26 +89,78 @@
 
     
     <!-- latest-transaction-section -->
-     <div id="latest-transaction" class="py-6 px-8">
-      <div class="flex justify-between items-center">
-        <h2 class="text-lg font-bold">Latest Transaction</h2>
-        <button class="text-gray-500 hover:text-blue-700  font-semibold cursor-pointer py-4 text-sm "">View All </button>
-      </div>
+     <div id="latest-transaction" class="px-8 ">
 
-      <div class="flex items-center justify-between px-4 py-3 bg-white rounded-md">
-        <div class="flex items-center gap-4">
-          <div class="flex justify-center items-center w-14 h-14 bg-gray-300 rounded-full">
-            <img class="w-8" src="assets/wallet 1.png" alt="Wallet">
-          </div>
-          <div>
-            <h1 class="text-base font-semibold">Electricity Bill</h1>
-            <p class="text-sm text-gray-600">Today 01:44 PM</p>
-          </div>
+        <div class="flex justify-between items-center">
+          <h2 class="text-lg font-bold">Latest Transaction</h2>
+          <button id="view-all-btn" class="text-gray-500 hover:text-blue-700  font-semibold cursor-pointer py-4 text-sm">View All Transaction </button>
         </div>
-        <button>
-          <img class="w-6" src="assets/option.png" alt="Options">
-        </button>
-      </div>
+
+        <!-- transaction-list -->
+        <div class="flex flex-col gap-4">
+
+          <div class="flex items-center justify-between px-4 py-3 bg-white rounded-md">
+            <div class="flex items-center gap-4">
+              <div class="flex justify-center items-center w-14 h-14 bg-gray-300 rounded-full">
+                <img class="w-8" src="assets/pay-bill.png" alt="Wallet">
+              </div>
+              <div>
+                <h1 class="text-base font-semibold">Electricity Bill</h1>
+                <p class="text-sm text-gray-600">Today 01:44 PM</p>
+              </div>
+            </div>
+            <button>
+              <img class="w-6" src="assets/option.png" alt="Options">
+            </button>
+          </div>
+
+          <div class="flex items-center justify-between px-4 py-3 bg-white rounded-md">
+            <div class="flex items-center gap-4">
+              <div class="flex justify-center items-center w-14 h-14 bg-gray-300 rounded-full">
+                <img class="w-8" src="assets/add-money.png" alt="Wallet">
+              </div>
+              <div>
+                <h1 class="text-base font-semibold">Add Money</h1>
+                <p class="text-sm text-gray-600">Today 01:44 PM</p>
+              </div>
+            </div>
+            <button>
+              <img class="w-6" src="assets/option.png" alt="Options">
+            </button>
+          </div>
+
+          <div class="flex items-center justify-between px-4 py-3 bg-white rounded-md">
+            <div class="flex items-center gap-4">
+              <div class="flex justify-center items-center w-14 h-14 bg-gray-300 rounded-full">
+                <img class="w-8" src="assets/cashout.png" alt="Wallet">
+              </div>
+              <div>
+                <h1 class="text-base font-semibold">Cashout</h1>
+                <p class="text-sm text-gray-600">Today 01:44 PM</p>
+              </div>
+            </div>
+            <button>
+              <img class="w-6" src="assets/option.png" alt="Options">
+            </button>
+          </div>
+
+          <div class="flex items-center justify-between px-4 py-3 bg-white rounded-md">
+            <div class="flex items-center gap-4">
+              <div class="flex justify-center items-center w-14 h-14 bg-gray-300 rounded-full">
+                <img class="w-8" src="assets/transfer-money.png" alt="Wallet">
+              </div>
+              <div>
+                <h1 class="text-base font-semibold">Transfer Money</h1>
+                <p class="text-sm text-gray-600">Today 01:44 PM</p>
+              </div>
+            </div>
+            <button>
+              <img class="w-6" src="assets/option.png" alt="Options">
+            </button>
+          </div>
+
+        </div>
+
      </div>
     
     <!-- Add-Money-section -->
@@ -174,7 +236,7 @@
 
 
               <div class="form-control">
-                <button id="add-money-btn" class="btn btn-primary w-full rounded-full bg-blue-500 border-none py-6 text-base">Add Money</button>
+                <button id="add-money-btn" class="btn btn-primary w-full rounded-full text-white bg-blue-500 border-none py-6 text-base">Add Money</button>
               </div>
             </form>
           </div>
@@ -195,30 +257,54 @@
 
               <div class="form-control">
                 <label class="label">
-                  <span class="label-text text-sm font-semibold text-black mb-1">Agent Number </span>
+                  <span class="label-text text-sm font-semibold text-black mb-1">Agent Number</span>
                 </label> <br>
-                <input id="cashout-account-number" value="01816111222" type="number" placeholder="Enter 11 digit account number" class="input input-bordered text-sm " required />
+                <input
+                  id="agent-number"
+                  type="text"
+                  value="01816111222"
+                  pattern="\d{11}"
+                  placeholder="Enter 11 digit agent number"
+                  class="input input-bordered text-sm"
+                  onkeypress="restrictToNumbers(event)"
+                  required
+                />
               </div>
 
               <div class="form-control">
                 <label class="label">
                   <span class="label-text text-sm font-semibold text-black mb-1">4 Digit PIN</span>
                 </label>
-                <input id="pin" value="1234" type="text" placeholder="Enter 4 digit PIN" class="input input-bordered text-sm " required />
-                <label class="label">
-                </label>
+                <input
+                  id="cashout-pin"
+                  type="text"
+                  value="1234"
+                  placeholder="Enter 6 digit PIN"
+                  class="input input-bordered text-sm"
+                  onkeypress="restrictToNumbers(event)"
+                  required
+                />
+
               </div>
 
               <div class="form-control mb-2">
                 <label class="label">
                   <span class="label-text text-base font-semibold text-black mb-1">Amount to Add</span>
                 </label>
-                <input type="number" placeholder="Add Withdraw Amount - Tk" class="input input-bordered text-sm " required />
+                <input
+                  id="add-cashout-amount"
+                  type="number"
+                  min="0"
+                  placeholder="Add Amount - Tk"
+                  class="input input-bordered text-sm"
+                  onkeypress="restrictToNumbers(event)"
+                  required
+                />
               </div>
 
 
               <div class="form-control">
-                <button class="btn btn-primary w-full rounded-full bg-blue-500 border-none py-6 text-base">Cashout</button>
+                <button id="cashout-btn" class="btn btn-primary w-full rounded-full bg-blue-500 border-none py-6 text-base">Cashout</button>
               </div>
             </form>
           </div>
@@ -228,41 +314,65 @@
     </div>
 
      <!-- Transfer-section -->
-    <div id="transfer-from">
+    <div id="sendmoney-form">
       
       <div class="px-4">
         <div class="hero-content flex-col lg:flex-row-reverse">
           <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
             
             <form class="px-4 py-4 gap-3 flex flex-col mx-auto">
-              <h1 class="text-2xl font-bold text-center text-gray-600 ">Transfer Money</h1>
+              <h1 class="text-2xl font-bold text-center text-gray-600 ">Send Money</h1>
 
               <div class="form-control">
                 <label class="label">
-                  <span class="label-text text-sm font-semibold text-black mb-1">Personal Number </span>
+                  <span class="label-text text-sm font-semibold text-black mb-1">Personal Number</span>
                 </label> <br>
-                <input id="transfer-money-account-number" value="01816111222" type="number" placeholder="Enter 11 digit account number" class="input input-bordered text-sm " required />
+                <input
+                  id="personal-number"
+                  type="text"
+                  value="01816111222"
+                  pattern="\d{11}"
+                  placeholder="Enter 11 digit personal number"
+                  class="input input-bordered text-sm"
+                  onkeypress="restrictToNumbers(event)"
+                  required
+                />
               </div>
 
               <div class="form-control">
                 <label class="label">
                   <span class="label-text text-sm font-semibold text-black mb-1">4 Digit PIN</span>
                 </label>
-                <input id="pin" value="1234" type="text" placeholder="Enter 4 digit PIN" class="input input-bordered text-sm " required />
-                <label class="label">
-                </label>
+                <input
+                  id="sendmoney-pin"
+                  type="text"
+                  value="1234"
+                  placeholder="Enter 4 digit PIN"
+                  class="input input-bordered text-sm"
+                  onkeypress="restrictToNumbers(event)"
+                  required
+                />
+
               </div>
 
               <div class="form-control mb-2">
                 <label class="label">
                   <span class="label-text text-base font-semibold text-black mb-1">Amount to Add</span>
                 </label>
-                <input type="number" placeholder="Add Withdraw Amount - Tk" class="input input-bordered text-sm " required />
+                <input
+                  id="add-sendmoney-amount"
+                  type="number"
+                  min="0"
+                  placeholder="Add Amount - Tk"
+                  class="input input-bordered text-sm"
+                  onkeypress="restrictToNumbers(event)"
+                  required
+                />
               </div>
 
 
               <div class="form-control">
-                <button class="btn btn-primary w-full rounded-full bg-blue-500 border-none py-6 text-base">Send Money</button>
+                <button id="sendmoney-btn" class="btn btn-primary w-full rounded-full bg-blue-500 border-none py-6 text-base">Send Money</button>
               </div>
             </form>
           </div>
@@ -312,8 +422,10 @@
               <h1 class="text-2xl font-bold text-center text-gray-600 ">Pay Bill</h1>
 
               <fieldset class="fieldset">
-                <legend class="fieldset-legend text-sm">Select to Pay</legend>
-                <select class="select">
+                <legend class="fieldset-legend text-sm">Select to Organization</legend>
+                <select id="pay-bill-org" class="select">
+                  <option disabled selected>Pick a Org</option>
+
                   <option value="Internet">Internet</option>
                   <option value="Electricity">Electricity</option>
                   <option value="Gas">Gas</option>
@@ -326,16 +438,16 @@
 
               <div class="form-control">
                 <label class="label">
-                  <span class="label-text text-sm font-semibold text-black mb-1">Mobile Number</span>
+                  <span class="label-text text-sm font-semibold text-black mb-1">Organization Receiver  Number</span>
                 </label> <br>
-                <input id="pay-bill-account-number" value="01816111222" type="number" placeholder="Enter 11 digit account number" class="input input-bordered text-sm " required />
+                <input id="organization-number" value="01816111222" type="number" placeholder="Enter 11 digit account number" class="input input-bordered text-sm " required />
               </div>
 
               <div class="form-control">
                 <label class="label">
                   <span class="label-text text-sm font-semibold text-black mb-1">4 Digit PIN</span>
                 </label>
-                <input id="pin" value="1234" type="text" placeholder="Enter 4 digit PIN" class="input input-bordered text-sm " required />
+                <input id="pay-bill-pin" value="1234" type="text" placeholder="Enter 4 digit PIN" class="input input-bordered text-sm " required />
                 <label class="label">
                 </label>
               </div>
@@ -344,12 +456,12 @@
                 <label class="label">
                   <span class="label-text text-base font-semibold text-black mb-1">Amount to Add</span>
                 </label>
-                <input type="number" placeholder="Add Amount - Tk" class="input input-bordered text-sm " required />
+                <input id="pay-bill-amount" type="number" placeholder="Add Amount - Tk" class="input input-bordered text-sm " required />
               </div>
 
 
               <div class="form-control">
-                <button class="btn btn-primary w-full rounded-full bg-blue-500 border-none py-6 text-base">Pay Now</button>
+                <button id="pay-now-btn" class="btn btn-primary w-full rounded-full bg-blue-500 border-none py-6 text-base">Pay Now</button>
               </div>
             </form>
           </div>
@@ -360,32 +472,87 @@
 
 
     <!-- transaction-history-section -->
-    <div id="transaction-history" class="py-6 px-8">
+    <div id="transaction-history" class="px-8">
+
      <div class="flex justify-between items-center">
        <h2 class="text-lg font-bold">Transaction History</h2>
-       <button class="text-gray-500 hover:text-blue-700  font-semibold cursor-pointer py-4 text-sm "">View All </button>
+       <button id="view-latest-btn" class="text-gray-500 hover:text-blue-700  font-semibold cursor-pointer py-4 text-sm "">View Latest Transaction</button>
      </div>
     
-     <div class="flex items-center justify-between px-4 py-3 bg-white rounded-md">
-      <div class="flex items-center gap-4">
-        <div class="flex justify-center items-center w-14 h-14 bg-gray-300 rounded-full">
-          <img class="w-8" src="assets/wallet 1.png" alt="Wallet">
+     <!-- transaction-list -->
+     <div class="flex flex-col gap-4">
+
+      <div class="flex items-center justify-between px-4 py-3 bg-white rounded-md">
+        <div class="flex items-center gap-4">
+          <div class="flex justify-center items-center w-14 h-14 bg-gray-300 rounded-full">
+            <img class="w-8" src="assets/add-money.png" alt="Wallet">
+          </div>
+          <div>
+            <h1 class="text-base font-semibold">Add Money</h1>
+            <p class="text-sm text-gray-600">Today 01:44 PM</p>
+          </div>
         </div>
-        <div>
-        <h1 class="text-base font-semibold">Electricity Bill</h1>
-        <p class="text-sm text-gray-600">Today 01:44 PM</p>
+        <button>
+          <img class="w-6" src="assets/option.png" alt="Options">
+        </button>
+      </div>
+
+      <div class="flex items-center justify-between px-4 py-3 bg-white rounded-md">
+        <div class="flex items-center gap-4">
+          <div class="flex justify-center items-center w-14 h-14 bg-gray-300 rounded-full">
+            <img class="w-8" src="assets/cashout.png" alt="Wallet">
+          </div>
+          <div>
+            <h1 class="text-base font-semibold">Cashout</h1>
+            <p class="text-sm text-gray-600">Today 01:44 PM</p>
+          </div>
         </div>
+        <button>
+          <img class="w-6" src="assets/option.png" alt="Options">
+        </button>
       </div>
-       <button>
-         <img class="w-6" src="assets/option.png" alt="Options"> </button>
+
+      <div class="flex items-center justify-between px-4 py-3 bg-white rounded-md">
+        <div class="flex items-center gap-4">
+          <div class="flex justify-center items-center w-14 h-14 bg-gray-300 rounded-full">
+            <img class="w-8" src="assets/transfer-money.png" alt="Wallet">
+          </div>
+          <div>
+            <h1 class="text-base font-semibold">Transfer Money</h1>
+            <p class="text-sm text-gray-600">Today 01:44 PM</p>
+          </div>
+        </div>
+        <button>
+          <img class="w-6" src="assets/option.png" alt="Options">
+        </button>
       </div>
+
+      <div class="flex items-center justify-between px-4 py-3 bg-white rounded-md">
+        <div class="flex items-center gap-4">
+          <div class="flex justify-center items-center w-14 h-14 bg-gray-300 rounded-full">
+            <img class="w-8" src="assets/pay-bill.png" alt="Wallet">
+          </div>
+          <div>
+            <h1 class="text-base font-semibold">Electricity Bill</h1>
+            <p class="text-sm text-gray-600">Today 01:44 PM</p>
+          </div>
+        </div>
+        <button>
+          <img class="w-6" src="assets/option.png" alt="Options">
+        </button>
+      </div>
+    
     </div>
-  
+    </div>
+
   </section>
 
   <script src="script/toggle.js"></script>
   <script src="utilities/utilities.js"></script>
   <script src="script/logout.js"></script>
   <script src="script/addmoney.js"></script>
+  <script src="script/cashout.js"></script>
+  <script src="script/sendmoney.js"></script>
+  <script src="script/paybill.js"></script>
 </body>
 </html>

@@ -39,7 +39,18 @@ function restrictToNumbers(event) {
 }
 
 
-//
+// 
 function toggleHandleSection(id, status){
   document.getElementById(id).style.display =status; 
+}
+
+// 
+function toggleHandleSection(activeID, sections, activeBox, allBoxes){
+  sections.forEach(id =>{
+    document.getElementById(id).style.display = id === activeID ? "block" : "none";
+  })
+
+  allBoxes.forEach(box => box.classList.remove("active"))
+
+  if(activeBox) activeBox.classList.add("active");
 }

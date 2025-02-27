@@ -13,14 +13,14 @@ document.getElementById('add-money-btn').addEventListener("click", function(even
   if (pin !== 1234) {
     return alert("❌ Invalid Pin!");
   }
-  if (amount <= 0) {
+  if (isNaN(amount) || amount <= 0) {
     return alert("⚠️ Warning: Amount field cannot be empty or negative!");
   }
 
   // Update balance
   const newBalance = mainBalance + amount;
   setInnerTextByIDandValue('main-balance', newBalance);
-  alert(`✅ Successfully added ৳${amount} to your balance!`);
+  alert(`✅ Successfully added ${amount} ৳`);
 
     // Clear input fields after successful operation
     clearInputFieldByID('bank-select');
