@@ -85,7 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "sendmoney-form", "get-bonus-form", "pay-bill-form", "transaction-history"
   ];
 
-  const boxes = document.querySelectorAll(".box"); // সব Box Select করা
+  // সব Box Select করা
+  const boxes = document.querySelectorAll(".box"); 
 
   function toggleSection(activeId, sections, activeBox, allBoxes) {
     sections.forEach(id => {

@@ -13,8 +13,11 @@ document.getElementById('pay-now-btn').addEventListener('click', function(event)
     return alert('❌ Invalid PIN. Input must be 4 digt pin');
 
   }
-  if(isNaN(billAmount) || billAmount <= 0){
+  if(isNaN(billAmount)){
     return alert("⚠️ Warning: Amount field cannot be empty or negative!");
+  }
+  if(billAmount > mainBalance) {
+    return alert('⚠️ Insufficient balance. Please add balance on your account.');
   }
 
   const newBalance = mainBalance - billAmount;

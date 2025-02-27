@@ -14,8 +14,11 @@ document.getElementById('cashout-btn').addEventListener("click", function(event)
   if (pin !== 1234) {
     return alert("❌ Invalid Pin!");
   }
-  if ( isNaN(amount) || amount <= 0) {
+  if ( isNaN(amount)) {
     return alert("⚠️ Warning: Amount field cannot be empty or negative!");
+  }
+  if(amount > mainBalance) {
+    return alert("⚠️ Warning: Insufficient balance");
   }
 
   // Update balance
